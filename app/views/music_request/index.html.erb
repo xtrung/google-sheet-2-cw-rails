@@ -1,0 +1,23 @@
+<div class="panel panel-default">
+	<h1>Music request </h1><br>
+	
+	<table class="table table-striped">
+		<% @music_data_paginate.each_with_index do |music, i| %>
+		<%= form_tag do %>
+		<tr>
+			<td><%= music[0] %></td>
+			<td><%= music[1] %></td>
+			<td><%= music[2] %></td>
+			<td>
+				<% if music[3].blank? %>
+					<%= hidden_field_tag("timespan", music[0]) %>
+					<button class="btn btn-info">Approve</button>
+				<% end %>
+			</td>
+		</tr>
+		<% end %>
+		<% end %>
+	</table>
+	<%= will_paginate @music_data_paginate %>
+</form>
+</div>
