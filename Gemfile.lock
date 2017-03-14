@@ -130,6 +130,7 @@ GEM
     nokogiri (1.7.0.1)
       mini_portile2 (~> 2.1.0)
     os (0.9.6)
+    pg (0.20.0)
     public_suffix (2.0.5)
     puma (3.8.1)
     rack (2.0.1)
@@ -227,6 +228,7 @@ DEPENDENCIES
   jbuilder (~> 2.5)
   jquery-rails
   listen (~> 3.0.5)
+  pg
   puma (~> 3.0)
   rails (~> 5.0.1)
   redis (~> 3.0)
