@@ -9,9 +9,10 @@
 			<td><%= music[1] %></td>
 			<td><%= music[2] %></td>
 			<td>
-				<% if music[3].blank? %>
+				<% if music[3].blank? && i > 0 %>
 					<%= hidden_field_tag("timespan", music[0]) %>
 					<button class="btn btn-info">Approve</button>
+					<button class="btn btn-warning" onclick="location='<%= edit_music_request_path music[0] %>';return false;">Edit</button>
 				<% end %>
 			</td>
 		</tr>
